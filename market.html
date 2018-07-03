@@ -1,0 +1,138 @@
+<html>
+<head>
+<meta charset="utf8"></meta>
+<title>交易市场</title>
+<style>
+body {font-size:13px;}
+.row {border-top: 1px dotted #555;}
+.tool {border:1px solid #888;width: 100px;height:180px;float:left;margin:2px 2px 2px 2px;}
+</style>
+
+
+    	<script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+
+	    <script src="GameTool.js"></script>
+	    <script src="web3.min.js"></script>
+	    <script src="truffle-contract.js"></script>
+	    <script src="contract.js"></script>
+
+
+		<script src="game.js"></script>
+		<script src="index.js"></script>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
+
+
+</head>
+<body>
+	<div class="container">
+		<div>你的道具箱</div>
+		<div>道具箱内容:</div>
+		<div>你的Token资产:1492(个)</div>
+		<div class="box">
+			<div class="tool">
+				<div><img src="./img/1.png" width=100 height=100 /></div>
+				<div><b><b>&nbsp;&nbsp;紫晶石</b></b>(13颗):</div>
+				<div>&nbsp;&nbsp市价:<input type="text" value="10 t" size="6" /></div>
+				<div>&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;">出售</button></div>
+				<div>&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;" onclick="App.sendOrder(131247133);">购买</button></div>
+			</div>
+			<div class="tool">
+				<div><img src="./img/2.png" width=100 height=100 /></div>
+				<div><b><b>&nbsp;&nbsp;紫晶石</b></b>(13颗):</div>
+				<div>&nbsp;&nbsp市价:<input type="text" value="10 t" size="6" /></div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;">出售</button></div>
+			</div>
+			<div class="tool">
+				<div><img src="./img/3.png" width=100 height=100 /></div>
+				<div><b><b>&nbsp;&nbsp;紫晶石</b></b>(13颗):</div>
+				<div>&nbsp;&nbsp市价:<input type="text" value="10 t" size="6" /></div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;">出售</button></div>
+			</div>
+			<div class="tool">
+				<div><img src="./img/4.png" width=100 height=100 /></div>
+				<div><b><b>&nbsp;&nbsp;紫晶石</b></b>(13颗):</div>
+				<div>&nbsp;&nbsp市价:<input type="text" value="10 t" size="6" /></div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;">出售</button></div>
+			</div>
+			<div class="tool">
+				<div><img src="./img/5.png" width=100 height=100 /></div>
+				<div><b><b>&nbsp;&nbsp;紫晶石</b></b>(13颗):</div>
+				<div>&nbsp;&nbsp市价:<input type="text" value="10 t" size="6" /></div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;">出售</button></div>
+			</div>
+			<div class="tool">
+				<div><img src="./img/7.png" width=100 height=100 /></div>
+				<div><b><b>&nbsp;&nbsp;紫晶石</b></b>(13颗):</div>
+				<div>&nbsp;&nbsp市价:<input type="text" value="10 t" size="6" /></div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;">出售</button></div>
+			</div>
+			<div class="tool">
+				<div><img src="./img/8.png" width=100 height=100 /></div>
+				<div><b><b>&nbsp;&nbsp;紫晶石</b></b>(13颗):</div>
+				<div>&nbsp;&nbsp市价:<input type="text" value="10 t" size="6" /></div>
+				<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button style="background-color: #dd8899;border-radius: 5px;">出售</button></div>
+			</div>
+		</div>
+
+		<div style="clear:both;"></div>
+		<br/>
+		<br/>
+		<div>当前买家</div>
+		<div class="box">
+			<div class="row">
+				<div style="width:30%;float:left;float:left;background-color: #88ccff;">玩家</div>
+				<div style="width:20%;float:left;float:left;background-color: #88ccff;">求购量</div>
+				<div style="width:20%;float:left;float:left;background-color: #88ccff;">出价(单)</div>
+				<div style="width:30%;float:left;float:left;background-color: #88ccff;">挂单时间</div>
+			</div>
+			<div class="row">
+				<div style="width:30%;float:left;">烈火手</div>
+				<div style="width:20%;float:left;">紫晶石-10颗</div>
+				<div style="width:20%;float:left;">100 token</div>
+				<div style="width:30%;float:left;">1小时前</div>
+			</div>
+			<div class="row">
+				<div style="width:30%;float:left;">紫星</div>
+				<div style="width:20%;float:left;">魔蛇胆-10颗</div>
+				<div style="width:20%;float:left;">100 token</div>
+				<div style="width:30%;float:left;">1小时前</div>
+			</div>
+			<div class="row">
+				<div style="width:30%;float:left;">冷火</div>
+				<div style="width:20%;float:left;">蓝冰-10颗</div>
+				<div style="width:20%;float:left;">100 token</div>
+				<div style="width:30%;float:left;">1小时前</div>
+			</div>
+			<div class="row">
+				<div style="width:30%;float:left;">药老不老</div>
+				<div style="width:20%;float:left;">雪山红-1颗</div>
+				<div style="width:20%;float:left;">100 token</div>
+				<div style="width:30%;float:left;">1小时前</div>
+			</div>
+		</div>
+
+		<br/>
+		<br/>
+		<br/>
+		<div>我的卖单</div>
+		<div class="box">
+			<div class="row">
+				<div style="width:20%;float:left;">药老不老</div>
+				<div style="width:20%;float:left;">雪山红-112颗</div>
+				<div style="width:20%;float:left;">100 token</div>
+				<div style="width:20%;float:left;">10 min ago</div>
+				<div style="width:20%;float:left;">等待交易</div>
+			</div>
+			<div class="row">
+				<div style="width:20%;float:left;">药老不老</div>
+				<div style="width:20%;float:left;">雪山红-10颗</div>
+				<div style="width:20%;float:left;">100 token</div>
+				<div style="width:20%;float:left;">1小时前</div>
+				<div style="width:20%;float:left;">交易完成</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

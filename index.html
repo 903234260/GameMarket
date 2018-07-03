@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<meta charset="utf8">
+		<title>Pac-Man . 吃豆游戏</title>
+		<link rel="shortcut icon" href="favicon.png">
+		<style>
+			*{padding:0;margin:0;}
+			.wrapper{
+				width: 960px;
+				margin:0 auto;
+				line-height:36px;
+				text-align:center;
+				color:#999;
+			}
+			canvas{display:block;background: #000;}
+			.mod-botton{
+				height: 32px;
+				padding: 15px 0;
+				text-align: center;
+			}
+		</style>
+		<script>
+			if(window.top != window.self ) {
+			    window.top.location = self.location.href;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<canvas id="canvas" width="960" height="640">不支持画布</canvas>
+			<p>按［空格］暂停或继续</p>
+			<div class="mod-botton">
+				<a href="./market.html" >道具市场</a>
+			</div>
+			<div class="mod-botton">
+				<a href="./miner.html" >道具矿场</a>
+			</div>
+		</div>
+		
+
+    	<script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+
+	    <script src="GameTool.js"></script>
+	    <script src="web3.min.js"></script>
+	    <script src="truffle-contract.js"></script>
+	    <script src="contract.js"></script>
+
+
+		<script src="game.js"></script>
+		<script src="index.js"></script>
+		<script async defer src="https://buttons.github.io/buttons.js"></script>
+		<div style="display: none;">
+			<script src="http://s95.cnzz.com/z_stat.php?id=1258310068&web_id=1258310068"></script>
+		</div>
+
+
+
+	</body>
+</html>
